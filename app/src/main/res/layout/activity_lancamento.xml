@@ -31,7 +31,7 @@
         android:id="@+id/btLimparLancamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Limpar"
+        android:text="Listar"
         android:onClick="btListarLancamentoOnClick"
         app:layout_constraintBottom_toBottomOf="@+id/etCodLancamento"
         app:layout_constraintEnd_toEndOf="parent"
