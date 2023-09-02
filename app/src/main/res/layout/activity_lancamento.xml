@@ -27,6 +27,17 @@
         app:layout_constraintStart_toStartOf="@+id/etQtdLancamento"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btLimparLancamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpar"
+        android:onClick="btListarLancamentoOnClick"
+        app:layout_constraintBottom_toBottomOf="@+id/etCodLancamento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etCodLancamento"
+        app:layout_constraintTop_toTopOf="@+id/etCodLancamento" />
+
     <TextView
         android:id="@+id/tvQtdLancamento"
         android:layout_width="wrap_content"
@@ -41,7 +52,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:ems="10"
         android:hint="Qtd do Produto"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/etValorLancamento"
@@ -62,7 +72,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:ems="10"
         android:hint="Valor Total da Compra"
         android:inputType="numberDecimal"
         app:layout_constraintStart_toEndOf="@+id/tvValorLancamento"
@@ -79,13 +88,5 @@
         app:layout_constraintStart_toStartOf="@+id/etValorLancamento"
         app:layout_constraintTop_toBottomOf="@+id/etValorLancamento" />
 
-    <Button
-        android:id="@+id/btLimparLancamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Limpar"
-        app:layout_constraintBottom_toBottomOf="@+id/etCodLancamento"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/etCodLancamento"
-        app:layout_constraintTop_toTopOf="@+id/etCodLancamento" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
