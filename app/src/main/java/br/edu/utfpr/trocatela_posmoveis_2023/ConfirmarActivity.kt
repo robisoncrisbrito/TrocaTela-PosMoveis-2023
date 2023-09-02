@@ -1,10 +1,12 @@
 package br.edu.utfpr.trocatela_posmoveis_2023
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
 import android.widget.TextView
+
 
 class ConfirmarActivity : AppCompatActivity() {
 
@@ -29,5 +31,16 @@ class ConfirmarActivity : AppCompatActivity() {
         etValor.setText( valor )
     }
 
-    fun btConfirmarConfirmarOnClick(view: View) {}
+    fun btConfirmarConfirmarOnClick(view: View) {
+        val sms = "Cod=${etCod.text.toString()} - Qtd=${etQtd.text.toString()} - Valor=${etValor.text.toString()}"
+
+        val intent = Intent( Intent.ACTION_VIEW)
+        intent.setData( Uri.parse( "sms:+554699112233" ) )
+        intent.putExtra( "sms_body", sms )
+
+        if( intent.resolveActivity( packageManager ) != null ) {
+            startActivity(intent)
+        }
+
+    }
 }
